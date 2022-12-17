@@ -1329,7 +1329,6 @@ PATHS = {
     ),
     ('ip', 'dns', 'static'): APIData(
         fully_understood=True,
-        stratify_keys=('name', ),
         fields={
             'address': KeyInfo(),
             'cname': KeyInfo(),
@@ -1338,7 +1337,8 @@ PATHS = {
             'forward-to': KeyInfo(),
             'mx-exchange': KeyInfo(),
             'mx-preference': KeyInfo(),
-            'name': KeyInfo(required=True),
+            'name': KeyInfo(),
+            'regexp': KeyInfo(),
             'ns': KeyInfo(),
             'srv-port': KeyInfo(),
             'srv-priority': KeyInfo(),
